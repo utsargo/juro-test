@@ -1,0 +1,40 @@
+<!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">About</h2>
+                    <h3 class="section-subheading text-muted">We are mostly programming enthusiast and never thought of it as a profession before. We spent a lot of time to learn the best practice of software engineering. We learned which tool we need to do the specific task we are assigned to, how to craft them elegantly if it is the first of its kind. We work for money, true. But, not only for money. We can't develop a website in PHP for you because that language is ugly and security is horrible. In our good sense, we can't also design your page with primitive, raw red, green or yellow (See some government website).</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                  <ul class="timeline">
+                    {% for entry in site.timeline %}
+                    <li class="{% cycle '', 'timeline-inverted' %}">
+                      <div class="timeline-image">
+                        <img class="img-circle img-responsive" src="{{ entry.image }}" alt="">
+                      </div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4>{% if entry.timespan %}{{ entry.timespan }}{% else %}{{ entry.date | date: '%B %d, %Y' }}{% endif %}</h4>
+                          <h4 class="subheading">{{ entry.title }}</h4>
+                        </div>
+                        <div class="timeline-body">
+                          <p class="text-muted">{{ entry.content }}</p>
+                        </div>
+                      </div>
+                    </li>
+                    {% endfor %}
+                    <li class="timeline-inverted">
+                      <div class="timeline-image">
+                        <h4>Be Part
+                          <br>Of Our
+                          <br>Story!</h4>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+    </section>

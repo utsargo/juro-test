@@ -1,0 +1,30 @@
+url: http://codejuro.com
+
+# Site settings
+title: Codejuro
+email: codejuro@gmail.com
+description: "Conjuring the spirit of Computer."
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: facebook
+    url: https://www.facebook.com/codejuro/
+  - title: github
+    url: https://github.com/codejuro
+
+# Postal address (add as many lines as necessary)
+address:
+  - line: 3481 Melrose Place
+  - line: Beverly Hills, CA 90210
+
+# Build settings
+markdown: kramdown
+kramdown:
+  hard_wrap: true
+permalink: pretty
+highlighter: rouge
+
+collections:
+- timeline
+- portfolio
+- team
